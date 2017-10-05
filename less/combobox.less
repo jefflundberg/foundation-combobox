@@ -1,0 +1,117 @@
+html {
+  //stop the page from jerking when the scrollbar appears
+  overflow-y: scroll;
+}
+
+
+
+.combobox {
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.dropdown-toggle {
+    left: -32px;
+}
+
+.typeahead {
+  border: 1px solid #ccc;
+  max-width: 500px;
+  margin-left: 0;
+  margin-top: 0;
+  box-shadow: 0 0 5px #cacaca;
+}
+.combobox:focus ~ span.dropdown-toggle {
+  opacity: 0;
+  left: -1000px;
+}
+.dropdown-toggle {
+  position: relative;
+  // right: 32px;
+  width: 1.75em;
+  max-height: 2em;
+  background-origin: content-box;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 9px 6px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+}
+// .dropdown-toggle .caret {
+//   // background-color: blue;
+//   // border: 1px solid #ccc;
+//   width: 1.75em;
+//   height: 2em;
+//   border-left: none;
+//   width: 1.75em;
+
+// }
+
+
+.typeahead li {
+  padding: 0.3rem 0.5rem;
+  margin: 0
+}
+.typeahead li.active {
+  background-color: #eee;
+}
+
+.form-search,
+.form-inline {
+  .combobox-container {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+    .input-group-addon{
+      width: auto;
+    }
+  }
+}
+
+// .combobox-selected .caret {
+//   display: none;
+// }
+
+/* :not doesn't work in IE8 */
+.combobox-container:not(.combobox-selected) .combobox-remove {
+  display: none;
+}
+
+.typeahead {
+  width: 100%;
+  max-width: 100%;
+}
+
+.typeahead-long {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.control-group.error .combobox-container{
+  .add-on {
+    color: #B94A48;
+    border-color: #B94A48;
+  }
+  // .caret {
+  //   border-top-color: #B94A48;
+  // }
+}
+
+.control-group.warning .combobox-container {
+  .add-on {
+    color: #C09853;
+    border-color: #C09853;
+  }
+  .caret {
+    border-top-color: #C09853;
+  }
+}
+
+.control-group.success .combobox-container{
+  .add-on {
+    color: #468847;
+    border-color: #468847;
+  }
+  // .caret {
+  //   border-top-color: #468847;
+  // }
+}
